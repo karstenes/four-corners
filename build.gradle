@@ -1,0 +1,32 @@
+group 'io.github.karstenes'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'sponge'
+        url = 'http://repo.spongepowered.org/maven'
+    }
+}
+
+plugins {
+    id 'org.spongepowered.plugin' version '0.5.2'
+}
+
+group = 'io.github.karstenes'
+version = '1.0-SNAPSHOT'
+description = 'Four corners'
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:4.1.0'
+}
+
+sponge {
+    plugin {
+        id = 'four-corners'
+    }
+}
